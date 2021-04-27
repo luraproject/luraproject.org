@@ -1,8 +1,11 @@
 <footer id="footer" class="w-full max-w-screen-xl mx-auto mb-6">
   <div class="px-6">
     <div class="w-full sm:max-w-2xl max-w-3xl mx-auto">
-      {{ with .Site.Params.copyright }}
-        <div class="prose copyright">{{ . | markdownify }} - {{ now.Year }}</div>
+      {{ if .Site.Params.copyright }}
+        <div class="prose copyright">
+          Copyright © {{ now.Year }} {{ .Site.Params.copyright | markdownify }}<br>
+          <small>For web site terms of use, trademark policy and other project policies please see <a href="{{ .Site.Params.copyrightURL }}">{{ .Site.Params.copyrightURL }}</a></small>
+        </div>
       {{ end }}
     </div>
   </div>

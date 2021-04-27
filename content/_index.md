@@ -39,16 +39,73 @@ That's something Lura can do for you. And this is how it would look like:
 
 Lura would merge all the data and return only the fields you need (the difference in size in the graph).
 
-Visit the [the repository](https://github.com/devopsfaith/krakend) for more information.
+Visit the [the repository](https://github.com/devopsfaith/krakend) for more information and documentation.
 
 ---
 
-# Download
+## Library Usage
 
-[...]
+Lura is presented as a **go library** that you can include in your own go application to build a powerful proxy or API gateway. In order to get you started several examples of implementations are included in the `examples` folder.
+
+Of course you will need [golang installed](https://golang.org/doc/install) in your system to compile the code.
+
+A ready to use example:
+
+```go
+    package main
+
+    import (
+        "flag"
+        "log"
+        "os"
+
+        "github.com/devopsfaith/krakend/config"
+        "github.com/devopsfaith/krakend/logging"
+        "github.com/devopsfaith/krakend/proxy"
+        "github.com/devopsfaith/krakend/router/gin"
+    )
+
+    func main() {
+        port := flag.Int("p", 0, "Port of the service")
+        logLevel := flag.String("l", "ERROR", "Logging level")
+        debug := flag.Bool("d", false, "Enable the debug")
+        configFile := flag.String("c", "/etc/krakend/configuration.json", "Path to the configuration filename")
+        flag.Parse()
+
+        parser := config.NewParser()
+        serviceConfig, err := parser.Parse(*configFile)
+        if err != nil {
+            log.Fatal("ERROR:", err.Error())
+        }
+        serviceConfig.Debug = serviceConfig.Debug || *debug
+        if *port != 0 {
+            serviceConfig.Port = *port
+        }
+
+        logger, _ := logging.NewLogger(*logLevel, os.Stdout, "[KRAKEND]")
+
+        routerFactory := gin.DefaultFactory(proxy.DefaultFactory(logger), logger)
+
+        routerFactory.New().Run(serviceConfig)
+    }
+```
+
+Visit the [framework overview](https://github.com/devopsfaith/krakend/blob/master/docs/OVERVIEW.md) for more details about the components of the Lura.
 
 ---
 
-# Copyright notices
+# Lura Technical Charter
 
-[...]
+You can download the Technical Charter here: 📄 "[The Technical Charter for Lura Project a Series of LF Projects, LLC](docs/Lura%20Technical%20Charter%20v1.pdf)".
+
+This document was adopted on April 14, 2021 and cover the following topics:
+
+1. Mission and Scope of the Project
+2. Technical Steering Committee
+3. TSC Voting
+4. Compliance with Policies
+5. Community Assets
+6. General Rules and Operations
+7. Intellectual Property Policy
+
+---

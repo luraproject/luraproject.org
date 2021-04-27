@@ -21,7 +21,9 @@ title = "Lura Project - An Open Source Api Gateway Framework"
 [params]
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Markdown is supported in here as well. So you may e.g. add a link to your legal imprint-page.
-    copyright = "© Linux Foundation"
+    copyright = "Lura Project a Series of LF Projects, LLC"
+
+    copyrightURL = "https://lfprojects.org"
 
     # The "description" of your website. This is used in the meta data of your generated html.
     description = "Lura Project - An Open Source Api Gateway Framework"
