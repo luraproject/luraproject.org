@@ -1,9 +1,19 @@
-# The Lura Project
+![](static/images/lura-logo-header.png)
 
-Start local Hugo using
+# The Lura Project Website
 
+## Install
+
+
+### Install dependencies
 ```shell
-$ hugo server
+$ make install
 ```
+    
+### Start Hugo in you local environment
+```shell
+$ make start
+```
+_It will dynamically build your static assets (CSS / Images) based on PostCSS & Hugo Pipelines_
 
-WiP to execute from inside Docker, since it needs Node to build static assets when starting (using Hugo Pipelines).
+Uses Tailwind CSS framework (https://tailwindcss.com/)
