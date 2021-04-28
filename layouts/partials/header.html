@@ -1,23 +1,20 @@
 <header id="header">
-  <div id="header-inner-wrapper" class="bg-gray-100">
+  <div id="header-inner-wrapper" class="bg-denim-100">
     <div class="w-full max-w-screen-xl relative mx-auto px-6 pt-16 pb-24">
 
-      {{ with .Params.teaser_image }}
       <div class="flex-shrink-0 mx-auto" id="teaser-image">
         <div class="mx-auto">
           <div class="flex flex-col p-2">
-            <img class="bg-gray-800 block mx-auto" src="{{ . }}"/>
+            <img class="block mx-auto" src="{{ .Params.teaser_image }}" alt="{{ .Params.header_brand }}"/>
           </div>
         </div>
       </div>
-      {{ end }}
 
-      <div class="text-center sm:max-w-2xl max-w-3xl mx-auto">
-        {{ with .Params.header_brand }}
-        <h1 id="brand-headline" class="text-teal-500 leading-tight text-3xl tracking-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-medium">
-          {{ . }}
+      <div class="text-center sm:max-w-2xl max-w-3xl mx-auto text-denim-800">
+
+        <h1 class="sr-only">
+          {{ .Params.header_brand }}
         </h1>
-        {{ end }}
         {{ with .Params.header_tagline_paragraph }}
           <p class="mt-6 sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed text-gray-600 leading-relaxed" id="tagline-paragraph">
             {{ . | markdownify }}
@@ -25,7 +22,7 @@
         {{ end }}
         <div class="flex mt-6 justify-center">
           {{ with .Params.header_button_cta }}
-            <a class="button rounded-lg px-4 md:px-5 py-3 md:py-4 bg-teal-500 hover:bg-teal-600 md:text-lg md:leading-tight text-white font-semibold leading-tight shadow-md" href="{{ .url }}" id="button-cta">
+            <a class="button rounded-lg px-4 md:px-5 py-3 md:py-4 bg-denim-500 hover:bg-denim-600 md:text-lg md:leading-tight text-white font-semibold leading-tight shadow-md" href="{{ .url }}" id="button-cta">
               {{ .title }}
             </a>
           {{ end }}
@@ -35,8 +32,9 @@
             </a>
           {{ end }}
         </div>
-        <div class="flex mt-12 justify-center">
-          <img class="bg-gray-800 block mx-auto" src="images/by-linux-foundation.png"/>
+        <div class="flex mt-12 items-center justify-center space-x-2">
+          <span class="block">by</span>
+          <img class="bg-gray-800 block" src="images/linux-foundation.png" alt="The Linux Foundation"/>
         </div>
       </div>
     </div>

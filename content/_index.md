@@ -10,7 +10,7 @@ header_button_more:
 teaser_image: "images/lura-logo-header.png"
 ---
 
-# What is The Lura Project
+# What is the Lura project
 
 Consumers of REST API content (specially in microservices) often query backend services that weren't coded for the UI implementation. This is of course a good practice, but the UI consumers need to do implementations that suffer a lot of complexity and burden with the sizes of their microservices responses.
 
@@ -90,7 +90,7 @@ A ready to use example:
     }
 ```
 
-Visit the [framework overview](https://github.com/devopsfaith/krakend/blob/master/docs/OVERVIEW.md) for more details about the components of the Lura.
+Visit the [framework overview](https://github.com/devopsfaith/krakend/blob/master/docs/OVERVIEW.md) for more details about the components of the Lura project.
 
 ---
 
