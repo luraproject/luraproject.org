@@ -1,42 +1,25 @@
-<header id="header">
-  <div id="header-inner-wrapper" class="bg-denim-100">
-    <div class="w-full max-w-screen-xl relative mx-auto px-6 pt-16 pb-24">
-
-      <div class="flex-shrink-0 mx-auto" id="teaser-image">
-        <div class="mx-auto">
-          <div class="flex flex-col p-2">
-            <img class="block mx-auto" src="{{ .Params.teaser_image }}" alt="{{ .Params.header_brand }}"/>
-          </div>
+<header>
+    <div class="bg-denim-100">
+        <div class="w-full max-w-screen-xl relative mx-auto p-6 flex items-stretch">
+            <div class="mr-24">
+                <a href="/"><img class="block mx-auto" src="/images/lura-logo-small-header.png" width="150" alt="The Lura Project"/></a>
+            </div>
+            <div class="flex-1 flex items-center space-x-6 text-denim-600 font-bold text-lg">
+                <a class="block{{ if eq .RelPermalink "/docs/"}} text-denim-800 border-b-2{{end}}" href="{{ ref . "/docs" }}">Docs</a>
+                <a class="block{{ if eq .RelPermalink "/community/"}} text-denim-800 border-b-2{{end}}" href="{{ ref . "/community" }}">Community</a>
+                <a class="block" href="https://github.com/luraproject/lura/releases">
+                    Download
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline -mt-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+                <a class="block" href="https://github.com/luraproject/lura">
+                    Github repo
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline -mt-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
         </div>
-      </div>
-
-      <div class="text-center sm:max-w-2xl max-w-3xl mx-auto text-denim-800">
-
-        <h1 class="sr-only">
-          {{ .Params.header_brand }}
-        </h1>
-        {{ with .Params.header_tagline_paragraph }}
-          <p class="mt-6 sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed text-gray-600 leading-relaxed" id="tagline-paragraph">
-            {{ . | markdownify }}
-          </p>
-        {{ end }}
-        <div class="flex mt-6 justify-center">
-          {{ with .Params.header_button_cta }}
-            <a class="button rounded-lg px-4 md:px-5 py-3 md:py-4 bg-denim-500 hover:bg-denim-600 md:text-lg md:leading-tight text-white font-semibold leading-tight shadow-md" href="{{ .url }}" id="button-cta">
-              {{ .title }}
-            </a>
-          {{ end }}
-          {{ with .Params.header_button_more }}
-            <a class="button button-secondary ml-4 rounded-lg px-4 md:px-5 py-3 md:py-4 bg-white hover:bg-gray-200 md:text-lg md:leading-tight text-gray-800 font-semibold leading-tight shadow-md" href="{{ .url }}" id="button-more">
-              {{ .title }}
-            </a>
-          {{ end }}
-        </div>
-        <div class="flex mt-12 items-center justify-center space-x-2">
-          <span class="block">by</span>
-          <img class="bg-gray-800 block" src="images/linux-foundation.png" alt="The Linux Foundation"/>
-        </div>
-      </div>
     </div>
-  </div>
 </header>
