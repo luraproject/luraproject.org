@@ -38,7 +38,7 @@ Visit the [the repository](https://github.com/devopsfaith/krakend) for more info
 
 # Lura Technical Charter
 
-You can download the Technical Charter here: 📄 "[The Technical Charter for Lura Project a Series of LF Projects, LLC](docs/Lura%20Technical%20Charter%20v1.pdf)".
+You can download the Technical Charter here: 📄 "[The Technical Charter for Lura Project a Series of LF Projects, LLC](/pdf/Lura-Technical-Charter-v1.pdf)".
 
 This document was adopted on April 14, 2021 and cover the following topics:
 
