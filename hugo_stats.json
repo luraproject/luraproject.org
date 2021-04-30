@@ -8,11 +8,11 @@
       "br",
       "code",
       "div",
-      "div\n",
       "em",
       "footer",
       "h1",
       "h2",
+      "h3",
       "head",
       "header",
       "hr",
@@ -30,7 +30,8 @@
       "span",
       "strong",
       "svg",
-      "title"
+      "title",
+      "ul"
     ],
     "classes": [
       "-mt-4",
@@ -113,10 +114,19 @@
       "library-usage",
       "lura-technical-charter",
       "main",
+      "middlewares-available",
+      "other-components-of-the-proxy-package",
+      "overview",
       "practical-example",
       "project-governance",
+      "proxies-available",
       "tagline-paragraph",
       "teaser-image",
+      "the-big-picture",
+      "the-config-package",
+      "the-lura-rules",
+      "the-proxy-package",
+      "the-router-package",
       "what-is-the-lura-project"
     ]
   }
