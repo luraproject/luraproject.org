@@ -3,7 +3,7 @@ title: "The Lura Project"
 description: "An extendable, simple and **stateless high-performance API Gateway framework** designed for both cloud-native and on-prem setups"
 ---
 
-# What is the Lura project
+# What is the Lura Project
 
 Consumers of REST API content (specially in microservices) often query backend services that weren't coded for the UI implementation. This is of course a good practice, but the UI consumers need to do implementations that suffer a lot of complexity and burden with the sizes of their microservices responses.
 
