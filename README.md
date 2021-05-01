@@ -1,4 +1,4 @@
-<img src="./images/lura-logo-header.svg" width="300" />
+<img src="./static/images/lura-logo-header.svg" width="300" />
 
 # The Lura Project Website
 
