@@ -32,7 +32,7 @@ That's something Lura can do for you. And this is how it would look like:
 
 Lura would merge all the data and return only the fields you need (the difference in size in the graph).
 
-Visit the [the repository](https://github.com/devopsfaith/krakend) for more information and documentation.
+Visit the [the repository](https://github.com/luraproject/lura) for more information and documentation.
 
 ---
 
