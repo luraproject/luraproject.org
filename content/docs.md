@@ -5,9 +5,9 @@ date: 2019-03-26T08:47:11+01:00
 
 ## Library Usage
 
-Lura is presented as a **go library** that you can include in your own go application to build a powerful proxy or API gateway. In order to get you started several examples of implementations are included in the `examples` folder.
+Lura is presented as a **Go library** that you can include in your own Go application to build a powerful proxy or API gateway. In order to get you started several examples of implementations are included in the `examples` folder.
 
-Of course you will need [golang installed](https://golang.org/doc/install) in your system to compile the code.
+Of course you will need [Go installed](https://golang.org/doc/install) in your system to compile the code.
 
 A ready to use example:
 
@@ -96,7 +96,7 @@ The `proxy` package is where the most part of the Lura components and features a
 * *Proxy* is a function that converts a given context and request into a response.
 * *Middleware* is a function that accepts one or more proxies and returns a single proxy wrapping them.
 
-This layer transforms the request received from the outter layer (router) into a single or several requests to your backend services, processes the responses and returns a single response.
+This layer transforms the request received from the outer layer (router) into a single or several requests to your backend services, processes the responses and returns a single response.
 
 Middlewares generates custom proxies that are chained depending on the workflow defined in the configuration until each possible branch ends in a transport-related proxy. Every one of these generated proxies is able to transform the input or even clone it several times and pass it or them to the next element in the chain. Finally, they can also modify the received response or responses adding all kinds of features to the generated pipe.
 
