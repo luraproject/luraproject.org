@@ -11,7 +11,7 @@ theme = "hugo-product-launch"
 # The "title" of your website
 title = "Lura Project - An Open Source Api Gateway Framework"
 
-googleAnalytics = 'UA-87994359-6'
+googleAnalytics = 'G-77C4WHS94J'
 
 # Render line-breaks in .md-files as line-breaks in HTML.
 # This is e.g. useful for rendering a multi-line address.
