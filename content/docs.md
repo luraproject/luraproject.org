@@ -9,7 +9,7 @@ Lura is presented as a **Go library** that you can include in your own Go applic
 
 Of course you will need [Go installed](https://golang.org/doc/install) in your system to compile the code.
 
-Several implementations are included in the `examples` folder to get you started. If you'd like to see a real-world example (using `gin`), see [KrakenD Community Edition](https://www.krakend.io), which uses Lura to its fullest extent.
+Several implementations are included in the `examples` folder to get you started. If you'd like to see a real-world example (using `gin`), see [KrakenD Community Edition](https://www.krakend.io/open-source/), which uses Lura to its fullest extent.
 
 A ready-to-use example:
 
